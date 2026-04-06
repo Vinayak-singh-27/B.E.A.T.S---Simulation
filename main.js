@@ -1,7 +1,5 @@
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
-
+const loader = new THREE.GLTFLoader();
 const container=document.getElementById("canvas-container");
 const panel=document.getElementById("controlPanel");
 
@@ -127,9 +125,8 @@ function updateSignal(text){
   ctx.fillText(text,256,150);
   tex.needsUpdate=true;
 }
-const dracoLoader = new DRACOLoader();
+const dracoLoader = new THREE.DRACOLoader();
 dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
-
 loader.setDRACOLoader(dracoLoader);
 /* CAR SYSTEM */
 const loader=new GLTFLoader();
@@ -139,7 +136,7 @@ let queues={north:0,south:0,east:0,west:0};
 let carModel = null;
 
 // preload model once
-loader.load('/CAR3D.glb', g=>{
+loader.load('./CAR3D.glb', g=>{
 
   carModel = g.scene;
 
