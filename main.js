@@ -1,4 +1,3 @@
-import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 const loader = new THREE.GLTFLoader();
 const container=document.getElementById("canvas-container");
 const panel=document.getElementById("controlPanel");
