@@ -129,7 +129,6 @@ const dracoLoader = new THREE.DRACOLoader();
 dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
 loader.setDRACOLoader(dracoLoader);
 /* CAR SYSTEM */
-const loader=new GLTFLoader();
 let cars=[];
 let queues={north:0,south:0,east:0,west:0};
 
